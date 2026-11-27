@@ -1,0 +1,2276 @@
+Build a complete, production-ready School & College Management System.
+
+This must be a REAL SOFTWARE PRODUCT, not a demo, prototype, landing page, concept UI, or AI-looking template.
+
+The final application should look like a professionally developed commercial education-management platform that a real school, college, university, or educational institution could actually use.
+
+IMPORTANT:
+- Do NOT use fake/demo student records.
+- Do NOT preload random students, teachers, parents, fees, attendance, marks, notices, etc.
+- Do NOT create fake statistics just to make the dashboard look populated.
+- Do NOT use lorem ipsum.
+- Do NOT use "John Doe", "Test Student", "Demo User", or similar placeholder records.
+- Do NOT create fake charts with invented numbers.
+- Do NOT show fake notifications.
+- Do NOT create fake transactions.
+- Do NOT hard-code business data into the frontend.
+- Every operational record must come from the database.
+- Empty database states must look intentional and professional.
+- Users must be able to create/import their own real institutional data.
+- All forms must actually save, update, validate, and delete data where appropriate.
+- All dashboard statistics must be calculated from real database records.
+- All modules must be connected to the same database.
+- Do not build disconnected screens.
+
+The application must be scalable enough to support both schools and colleges.
+
+====================================================
+1. PRODUCT NAME
+====================================================
+
+Use a professional product name:
+
+"EduCore"
+
+Subtitle:
+
+"School & College Management System"
+
+Do not make the interface look like an AI-generated SaaS template.
+
+The branding should be clean, trustworthy, academic, modern, and suitable for an education institution.
+
+====================================================
+2. DESIGN DIRECTION
+====================================================
+
+Create a premium professional education-management interface.
+
+Design goals:
+
+- Clean
+- Modern
+- Professional
+- Fast
+- Minimal
+- Trustworthy
+- Academic
+- Enterprise-grade
+- Easy for non-technical staff
+- Responsive
+- Accessible
+- Desktop-first but fully mobile responsive
+
+Avoid:
+
+- Excessive gradients
+- Excessive glassmorphism
+- Huge rounded cards everywhere
+- Neon colors
+- AI-style glowing effects
+- Random illustrations
+- Cartoon graphics
+- Excessive animations
+- Generic dashboard templates
+- Unnecessary decorative elements
+
+Use:
+
+- Clean typography
+- Strong visual hierarchy
+- Consistent spacing
+- Professional tables
+- Clear forms
+- Proper empty states
+- Meaningful icons
+- Subtle shadows
+- Professional borders
+- Consistent buttons
+- Clear status badges
+- Proper loading states
+- Proper error states
+- Confirmation dialogs
+- Toast notifications
+
+The UI should feel like software purchased by a serious educational institution.
+
+====================================================
+3. RESPONSIVE LAYOUT
+====================================================
+
+Desktop:
+
+Left sidebar navigation.
+
+Top navigation:
+
+- Institution name
+- Search
+- Notifications
+- Help
+- User profile
+- Role
+- Logout
+
+Main content area.
+
+Mobile:
+
+- Collapsible sidebar
+- Mobile navigation
+- Responsive tables
+- Bottom or slide-out navigation where appropriate
+- Touch-friendly controls
+
+The interface must work properly at:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+====================================================
+4. AUTHENTICATION
+====================================================
+
+Implement real authentication.
+
+Support:
+
+- Login
+- Logout
+- Forgot password
+- Password reset
+- Session management
+- Secure authentication
+- Role-based access
+- Protected routes
+
+User roles:
+
+1. Super Administrator
+2. Institution Administrator
+3. Principal / Director
+4. Vice Principal
+5. HOD
+6. Teacher / Faculty
+7. Accountant
+8. Librarian
+9. Receptionist
+10. Student
+11. Parent / Guardian
+
+Each role must have different permissions.
+
+Never rely only on frontend permission checks.
+
+Database/security rules must also enforce access control.
+
+====================================================
+5. MULTI-INSTITUTION SUPPORT
+====================================================
+
+Architect the system so multiple institutions can be supported in the future.
+
+Each institution should have:
+
+- Institution ID
+- Institution name
+- Logo
+- Address
+- Phone
+- Email
+- Website
+- Academic year
+- Time zone
+- Currency
+- Institution type
+- Contact information
+
+All institution-specific data must remain isolated.
+
+====================================================
+6. INITIAL SETUP WIZARD
+====================================================
+
+When a new institution starts using the software, provide a setup wizard.
+
+Step 1:
+Institution information
+
+Step 2:
+Academic year
+
+Step 3:
+Departments
+
+Step 4:
+Classes / Programs
+
+Step 5:
+Sections / Batches
+
+Step 6:
+Subjects
+
+Step 7:
+Working days
+
+Step 8:
+Fee categories
+
+Step 9:
+User accounts
+
+Step 10:
+Complete setup
+
+Do not require users to manually configure technical database settings.
+
+====================================================
+7. MAIN DASHBOARD
+====================================================
+
+Create a role-specific dashboard.
+
+Administrator dashboard should display real calculated information such as:
+
+- Total students
+- Total faculty
+- Total staff
+- Active classes
+- Departments
+- Attendance today
+- Pending fees
+- Recent admissions
+- Upcoming examinations
+- Upcoming events
+- Recent notices
+
+IMPORTANT:
+
+If there is no data, do not invent numbers.
+
+For example:
+
+Instead of:
+
+"Students: 4,582"
+
+when the database is empty,
+
+show:
+
+"Students
+0
+No students added yet"
+
+and provide an appropriate action:
+
+"Add Student"
+
+Charts must also use real database data.
+
+If there is insufficient data for a chart, display a professional empty state.
+
+====================================================
+8. STUDENT MANAGEMENT
+====================================================
+
+Create a complete student management module.
+
+Student profile fields:
+
+- Student ID
+- Admission number
+- Roll number
+- First name
+- Middle name
+- Last name
+- Date of birth
+- Gender
+- Blood group
+- Phone
+- Email
+- Address
+- City
+- State
+- Country
+- Postal code
+- Photo
+- Admission date
+- Academic year
+- Class / Program
+- Section / Batch
+- Department
+- Student status
+- Previous institution
+- Transfer information
+- Guardian information
+- Emergency contact
+- Documents
+
+Student status:
+
+- Active
+- Inactive
+- Graduated
+- Transferred
+- Suspended
+- Withdrawn
+
+Student profile page should contain tabs:
+
+Overview
+Attendance
+Academic Records
+Examinations
+Fees
+Documents
+Discipline
+Library
+Transport
+Communication
+
+Include:
+
+- Search
+- Filter
+- Sort
+- Pagination
+- Bulk actions
+- Export
+- Import
+- Print student profile
+
+Do not expose sensitive information to unauthorized roles.
+
+====================================================
+9. ADMISSION MANAGEMENT
+====================================================
+
+Create a complete admission system.
+
+Features:
+
+- Admission applications
+- Application number
+- Applicant information
+- Guardian information
+- Previous education
+- Course/class selection
+- Document upload
+- Application status
+- Verification
+- Interview/test status
+- Admission approval
+- Admission confirmation
+- Student ID generation
+
+Statuses:
+
+- Draft
+- Submitted
+- Under Review
+- Documents Pending
+- Approved
+- Rejected
+- Enrolled
+
+Create a professional admission workflow.
+
+====================================================
+10. CLASS / ACADEMIC STRUCTURE
+====================================================
+
+Support both school and college structures.
+
+School:
+
+- Academic Year
+- Class
+- Section
+- Subject
+
+College:
+
+- Academic Year
+- Department
+- Program
+- Semester
+- Batch
+- Section
+- Course
+- Subject
+
+Allow administrators to configure the academic structure.
+
+====================================================
+11. DEPARTMENT MANAGEMENT
+====================================================
+
+Department fields:
+
+- Department name
+- Department code
+- HOD
+- Description
+- Status
+
+Examples should NOT be inserted automatically.
+
+Administrators should create their own departments.
+
+====================================================
+12. COURSE / PROGRAM MANAGEMENT
+====================================================
+
+Support:
+
+- Program name
+- Program code
+- Degree/type
+- Department
+- Duration
+- Semester count
+- Credit structure
+- Status
+
+Allow different academic structures for different programs.
+
+====================================================
+13. SUBJECT MANAGEMENT
+====================================================
+
+Subject fields:
+
+- Subject code
+- Subject name
+- Department
+- Program
+- Semester/Class
+- Credits
+- Theory/practical
+- Max marks
+- Passing marks
+- Faculty
+- Status
+
+Allow subjects to be assigned to classes, semesters, sections, and teachers.
+
+====================================================
+14. FACULTY MANAGEMENT
+====================================================
+
+Create a complete faculty management module.
+
+Fields:
+
+- Employee ID
+- Name
+- Profile photo
+- Email
+- Phone
+- Date of joining
+- Department
+- Designation
+- Qualification
+- Experience
+- Employment type
+- Subjects
+- Assigned classes
+- Documents
+- Status
+
+Faculty profile should include:
+
+- Attendance
+- Timetable
+- Assigned classes
+- Subjects
+- Leave
+- Payroll summary if enabled
+- Documents
+
+====================================================
+15. STAFF MANAGEMENT
+====================================================
+
+Create staff management.
+
+Categories can be configured by administrator.
+
+Include:
+
+- Employee ID
+- Name
+- Department
+- Designation
+- Contact
+- Joining date
+- Employment status
+- Documents
+
+Do not hard-code categories.
+
+====================================================
+16. ATTENDANCE MANAGEMENT
+====================================================
+
+Create real attendance functionality.
+
+Student attendance:
+
+- Daily attendance
+- Class attendance
+- Subject attendance
+- Monthly attendance
+- Semester attendance
+- Attendance percentage
+- Late status
+- Leave status
+
+Statuses:
+
+- Present
+- Absent
+- Late
+- Leave
+- Holiday
+
+Faculty/staff attendance should also be supported.
+
+Teachers should be able to mark attendance only for authorized classes.
+
+Prevent unauthorized modification.
+
+Maintain attendance history.
+
+Provide:
+
+- Attendance reports
+- Date filters
+- Class filters
+- Student filters
+- Monthly summaries
+- Export
+- Print
+
+====================================================
+17. TIMETABLE MANAGEMENT
+====================================================
+
+Create timetable management.
+
+Support:
+
+- Classes
+- Sections
+- Subjects
+- Faculty
+- Rooms
+- Days
+- Time slots
+
+Prevent conflicts such as:
+
+- Same teacher assigned to two classes at same time
+- Same room assigned to two classes
+- Same section assigned to multiple subjects at same time
+
+Provide:
+
+- Class timetable
+- Faculty timetable
+- Room timetable
+- Student timetable
+
+Allow print/export.
+
+====================================================
+18. EXAMINATION MANAGEMENT
+====================================================
+
+Create complete examination management.
+
+Features:
+
+- Examination creation
+- Exam type
+- Academic year
+- Semester
+- Subjects
+- Exam schedule
+- Exam room
+- Invigilator
+- Maximum marks
+- Passing marks
+- Marks entry
+- Grade calculation
+- Result generation
+- Result publishing
+
+Support:
+
+- Internal assessment
+- Mid-term
+- Semester examination
+- Final examination
+- Practical examination
+- Viva
+
+Do not assume any specific grading system.
+
+Allow administrator configuration.
+
+====================================================
+19. MARKS ENTRY
+====================================================
+
+Teachers should be able to enter marks only for authorized subjects.
+
+Features:
+
+- Student list
+- Subject
+- Maximum marks
+- Marks obtained
+- Absent
+- Remarks
+
+Validate marks.
+
+Do not allow marks greater than maximum marks.
+
+Maintain audit history for changes.
+
+====================================================
+20. RESULT MANAGEMENT
+====================================================
+
+Generate student results from actual marks.
+
+Include:
+
+- Subject-wise marks
+- Total marks
+- Percentage
+- Grade
+- GPA/CGPA where configured
+- Pass/fail
+- Rank if institution enables ranking
+- Remarks
+
+Generate professional result sheets.
+
+Allow:
+
+- Print
+- PDF
+- Download
+- Secure sharing
+
+Do not generate fake results.
+
+====================================================
+21. FEES MANAGEMENT
+====================================================
+
+Create a complete fee management system.
+
+Fee categories should be configurable.
+
+Support:
+
+- Tuition fee
+- Admission fee
+- Examination fee
+- Library fee
+- Transport fee
+- Hostel fee
+- Other configurable fees
+
+Do not create fake fee categories or transactions automatically.
+
+Features:
+
+- Fee structure
+- Student fee assignment
+- Invoice generation
+- Payment recording
+- Partial payment
+- Discounts
+- Scholarships
+- Waivers
+- Due dates
+- Late fees
+- Outstanding balance
+- Payment history
+- Receipts
+- Refunds
+
+Every transaction must be stored in the database.
+
+====================================================
+22. ONLINE PAYMENT ARCHITECTURE
+====================================================
+
+Design the system so a payment gateway can be connected later.
+
+Payment architecture should support:
+
+- Payment order
+- Payment status
+- Transaction ID
+- Payment method
+- Successful payment
+- Failed payment
+- Refund
+
+Never fake successful payments.
+
+If payment integration is not configured, clearly indicate that online payment is unavailable.
+
+====================================================
+23. ACCOUNTING
+====================================================
+
+Create an accounting module.
+
+Features:
+
+- Income
+- Expenses
+- Fee collections
+- Refunds
+- Expense categories
+- Payment methods
+- Transaction history
+- Date filters
+- Reports
+
+Provide financial summaries based only on actual transactions.
+
+====================================================
+24. LIBRARY MANAGEMENT
+====================================================
+
+Create a real library system.
+
+Books:
+
+- ISBN
+- Book title
+- Author
+- Publisher
+- Category
+- Edition
+- Quantity
+- Available quantity
+- Shelf
+- Book status
+
+Library operations:
+
+- Issue
+- Return
+- Renew
+- Reservation
+- Fine
+- Lost book
+- Damaged book
+
+Student/faculty library history.
+
+Do not preload fake books.
+
+====================================================
+25. TRANSPORT MANAGEMENT
+====================================================
+
+Create transport management.
+
+Vehicles:
+
+- Vehicle number
+- Vehicle type
+- Capacity
+- Driver
+- Route
+- Status
+
+Routes:
+
+- Route name
+- Stops
+- Pickup time
+- Drop time
+- Assigned students
+
+Transport fee integration.
+
+Do not create fake vehicles or routes.
+
+====================================================
+26. HOSTEL MANAGEMENT
+====================================================
+
+Create optional hostel management.
+
+Features:
+
+- Hostels
+- Buildings
+- Floors
+- Rooms
+- Beds
+- Warden
+- Student allocation
+- Vacancies
+- Hostel fees
+- Check-in
+- Check-out
+
+Show actual availability from the database.
+
+====================================================
+27. HR / LEAVE MANAGEMENT
+====================================================
+
+Create employee leave management.
+
+Features:
+
+- Leave types
+- Leave application
+- Approval
+- Rejection
+- Leave balance
+- Leave history
+
+Different approval permissions by role.
+
+====================================================
+28. COMMUNICATION
+====================================================
+
+Create communication management.
+
+Support:
+
+- Notices
+- Announcements
+- Messages
+- Email integration architecture
+- SMS integration architecture
+- Push notification architecture
+
+Allow targeting:
+
+- Entire institution
+- Department
+- Class
+- Section
+- Faculty
+- Students
+- Parents
+
+Do not create fake notifications.
+
+====================================================
+29. PARENT / GUARDIAN PORTAL
+====================================================
+
+Parents should have their own dashboard.
+
+Show only their child's authorized information.
+
+Features:
+
+- Child profile
+- Attendance
+- Results
+- Fees
+- Timetable
+- Homework
+- Notices
+- Examination schedule
+- Leave requests
+- Communication
+
+If a parent has multiple children, allow switching between children.
+
+====================================================
+30. STUDENT PORTAL
+====================================================
+
+Student dashboard:
+
+- Profile
+- Attendance
+- Timetable
+- Subjects
+- Assignments
+- Examination
+- Results
+- Fees
+- Library
+- Notices
+- Documents
+
+Students must only access their own records.
+
+====================================================
+31. TEACHER PORTAL
+====================================================
+
+Teacher dashboard:
+
+- Today's timetable
+- Assigned classes
+- Attendance
+- Subjects
+- Students
+- Marks entry
+- Assignments
+- Notices
+- Leave
+- Profile
+
+Teachers must only access authorized academic records.
+
+====================================================
+32. ASSIGNMENTS / HOMEWORK
+====================================================
+
+Create assignment management.
+
+Teacher:
+
+- Create assignment
+- Subject
+- Class
+- Section
+- Due date
+- Description
+- Attachment
+
+Student:
+
+- View assignment
+- Submit assignment
+- Upload file
+- Submission date
+- Status
+
+Teacher:
+
+- Review
+- Grade
+- Feedback
+
+====================================================
+33. DOCUMENT MANAGEMENT
+====================================================
+
+Create secure document management.
+
+Student documents:
+
+- ID proof
+- Previous marksheet
+- Transfer certificate
+- Birth certificate
+- Photograph
+- Other configurable documents
+
+Employee documents:
+
+- Qualification
+- ID
+- Experience
+- Certificates
+- Other documents
+
+Use secure storage.
+
+Do not expose documents publicly.
+
+====================================================
+34. NOTICE BOARD
+====================================================
+
+Create a professional notice board.
+
+Features:
+
+- Create notice
+- Title
+- Content
+- Attachment
+- Publish date
+- Expiry date
+- Target audience
+- Draft
+- Published
+- Archived
+
+Only authorized users can publish notices.
+
+====================================================
+35. CALENDAR
+====================================================
+
+Create institutional calendar.
+
+Events:
+
+- Academic events
+- Exams
+- Holidays
+- Meetings
+- Parent meetings
+- Events
+- Important deadlines
+
+Allow filtering by audience.
+
+====================================================
+36. SEARCH
+====================================================
+
+Create global search.
+
+Search across authorized records:
+
+- Students
+- Faculty
+- Staff
+- Classes
+- Courses
+- Subjects
+- Fees
+- Exams
+- Notices
+
+Search must respect permissions.
+
+====================================================
+37. REPORTS
+====================================================
+
+Create a complete reports center.
+
+Reports:
+
+- Student report
+- Admission report
+- Attendance report
+- Faculty report
+- Fee collection report
+- Outstanding fees report
+- Examination report
+- Result report
+- Library report
+- Transport report
+- Hostel report
+- Employee report
+- Leave report
+
+Filters:
+
+- Academic year
+- Date range
+- Department
+- Class
+- Section
+- Program
+- Semester
+- Status
+
+Allow:
+
+- View
+- Print
+- Export CSV
+- Export Excel where supported
+- PDF generation where supported
+
+Reports must be generated from real database data.
+
+====================================================
+38. AUDIT LOG
+====================================================
+
+Create a complete audit log.
+
+Track:
+
+- Login
+- Logout
+- Create
+- Update
+- Delete
+- Fee transaction
+- Marks modification
+- Attendance modification
+- Permission changes
+- User changes
+
+Store:
+
+- User
+- Action
+- Module
+- Record
+- Timestamp
+- IP/device information where legally appropriate
+
+Administrators should be able to review audit history.
+
+====================================================
+39. ROLE & PERMISSION MANAGEMENT
+====================================================
+
+Create a permission matrix.
+
+Permissions should be configurable.
+
+Examples:
+
+Students:
+- View
+- Create
+- Edit
+- Delete
+- Export
+
+Attendance:
+- View
+- Mark
+- Edit
+- Export
+
+Fees:
+- View
+- Create
+- Edit
+- Refund
+- Export
+
+Exams:
+- Create
+- Marks entry
+- Publish
+- Edit
+- View
+
+Do not give every user administrator access.
+
+Use least-privilege permissions.
+
+====================================================
+40. DATA IMPORT
+====================================================
+
+Create CSV/Excel import functionality where appropriate.
+
+Before importing:
+
+- Validate columns
+- Validate required fields
+- Detect duplicates
+- Show errors
+- Preview records
+- Confirm import
+
+Never silently import invalid data.
+
+Provide downloadable import templates.
+
+====================================================
+41. DATA EXPORT
+====================================================
+
+Allow authorized users to export records.
+
+Formats:
+
+- CSV
+- Excel
+- PDF where appropriate
+
+Respect role permissions.
+
+====================================================
+42. SETTINGS
+====================================================
+
+Create settings.
+
+Institution settings:
+
+- Institution profile
+- Logo
+- Contact
+- Academic year
+- Working days
+- Grading system
+- Attendance rules
+- Fee rules
+- Notification settings
+- Document settings
+- Security settings
+
+Do not hide important configuration inside code.
+
+====================================================
+43. ACADEMIC YEAR
+====================================================
+
+Support multiple academic years.
+
+Example workflow:
+
+2026–27
+2027–28
+2028–29
+
+Do NOT automatically create these years.
+
+The administrator should create academic years.
+
+Data from different academic years must remain properly separated.
+
+Allow academic-year switching where appropriate.
+
+====================================================
+44. DATABASE ARCHITECTURE
+====================================================
+
+Use a proper relational database.
+
+Do not store the whole application inside local browser storage.
+
+Use normalized tables with proper relationships.
+
+Core entities should include concepts such as:
+
+institutions
+users
+roles
+permissions
+students
+guardians
+employees
+departments
+programs
+classes
+sections
+subjects
+academic_years
+enrollments
+attendance
+timetables
+examinations
+exam_subjects
+marks
+results
+fee_structures
+student_fees
+payments
+invoices
+library_books
+library_transactions
+transport
+hostels
+assignments
+notices
+events
+documents
+leave_requests
+audit_logs
+
+Design relationships properly.
+
+Use primary keys and foreign keys.
+
+Use indexes for frequently searched fields.
+
+Prevent duplicate records.
+
+Use transactions for financial and important operations.
+
+====================================================
+45. SECURITY
+====================================================
+
+Security is extremely important.
+
+Implement:
+
+- Secure authentication
+- Role-based authorization
+- Database-level access control
+- Input validation
+- Server-side validation
+- Secure file uploads
+- Protected API routes
+- Rate limiting where appropriate
+- Secure password handling
+- Session protection
+- Audit logging
+- SQL injection protection
+- XSS protection
+- CSRF protection where applicable
+- Secure environment variables
+- No secrets in frontend code
+
+Never expose API keys.
+
+Never expose database credentials.
+
+Never store passwords as plain text.
+
+====================================================
+46. API ARCHITECTURE
+====================================================
+
+Use clean API architecture.
+
+Separate:
+
+- Authentication
+- Users
+- Students
+- Faculty
+- Admissions
+- Attendance
+- Academics
+- Exams
+- Fees
+- Library
+- Transport
+- Hostel
+- Reports
+- Notifications
+- Settings
+
+Use consistent API responses.
+
+Handle:
+
+- Loading
+- Success
+- Validation errors
+- Authentication errors
+- Authorization errors
+- Server errors
+- Not found
+
+Do not expose unnecessary database fields.
+
+====================================================
+47. ERROR HANDLING
+====================================================
+
+Every important action must have proper error handling.
+
+Never show raw technical errors to users.
+
+Instead show useful messages such as:
+
+"Unable to save the student record. Please check the highlighted fields."
+
+For developers, log the actual error securely.
+
+Create:
+
+- 404 page
+- 403 page
+- 500 page
+- Network error state
+- Empty state
+- Loading state
+
+====================================================
+48. EMPTY STATES
+====================================================
+
+Empty database states are very important.
+
+Examples:
+
+"No students have been added yet."
+
+Button:
+
+"Add Student"
+
+Another:
+
+"No examinations have been created for this academic year."
+
+Button:
+
+"Create Examination"
+
+Do not fill empty screens with fake data.
+
+====================================================
+49. FORM DESIGN
+====================================================
+
+All forms must be professional.
+
+Use:
+
+- Labels
+- Required indicators
+- Validation
+- Helpful descriptions
+- Dropdowns
+- Date pickers
+- Searchable selectors
+- File upload
+- Error messages
+
+Prevent accidental submission.
+
+Show save progress.
+
+Show successful save confirmation.
+
+====================================================
+50. TABLE DESIGN
+====================================================
+
+All management tables should support:
+
+- Search
+- Filter
+- Sort
+- Pagination
+- Column visibility
+- Export
+- Bulk selection where appropriate
+
+Tables should remain usable with large datasets.
+
+Do not create giant cards instead of tables for administrative records.
+
+====================================================
+51. PERFORMANCE
+====================================================
+
+Optimize for real institutional use.
+
+Use:
+
+- Pagination
+- Lazy loading
+- Server-side filtering
+- Indexed database queries
+- Efficient API calls
+- Caching where appropriate
+- Optimized images
+- Code splitting
+- Debounced search
+
+Do not load thousands of records unnecessarily.
+
+====================================================
+52. ACCESSIBILITY
+====================================================
+
+Follow accessible UI principles.
+
+Support:
+
+- Keyboard navigation
+- Clear focus states
+- Good contrast
+- Screen-reader-friendly labels
+- Accessible buttons
+- Proper form labels
+- Error announcements
+
+====================================================
+53. MOBILE
+====================================================
+
+The application must work properly on mobile.
+
+Students and parents will primarily use mobile devices.
+
+Mobile should support:
+
+- Attendance viewing
+- Timetable
+- Results
+- Fees
+- Notices
+- Assignments
+- Profile
+- Notifications
+
+Administrative modules should also remain usable on tablets.
+
+====================================================
+54. FILE STORAGE
+====================================================
+
+Use secure cloud/object storage for:
+
+- Student photos
+- Employee photos
+- Documents
+- Assignment attachments
+- Institution logo
+- Other authorized files
+
+Never store large files directly inside relational database fields unless there is a specific reason.
+
+Store file metadata in the database.
+
+====================================================
+55. NOTIFICATION SYSTEM
+====================================================
+
+Create notification architecture.
+
+Notification types:
+
+- Fee due
+- Payment confirmation
+- Attendance
+- Examination
+- Result publication
+- Assignment
+- Notice
+- Leave approval
+- Important institutional announcement
+
+Users should be able to view notification history.
+
+Do not generate fake notifications.
+
+====================================================
+56. DASHBOARD PERSONALIZATION
+====================================================
+
+Dashboard should change according to role.
+
+Administrator:
+Institution overview
+
+Teacher:
+Teaching overview
+
+Student:
+Academic overview
+
+Parent:
+Child overview
+
+Accountant:
+Financial overview
+
+Librarian:
+Library overview
+
+Do not show irrelevant modules.
+
+====================================================
+57. SUPER ADMIN
+====================================================
+
+Super Admin should be able to manage:
+
+- Institutions
+- Institution administrators
+- Subscription/system configuration if SaaS mode is enabled
+- System settings
+- Security
+- Audit logs
+- Platform-level configuration
+
+Keep institution data isolated.
+
+====================================================
+58. SAAS-READY ARCHITECTURE
+====================================================
+
+Architect the software so it can eventually become a SaaS product.
+
+Potential future capabilities:
+
+- Multiple institutions
+- Subscription plans
+- Institution onboarding
+- Usage limits
+- Billing
+- Feature permissions
+- Tenant isolation
+
+Do not implement fake subscription/payment data.
+
+Build the architecture cleanly so these features can be added later.
+
+====================================================
+59. DATA INTEGRITY
+====================================================
+
+Never allow inconsistent data.
+
+Examples:
+
+A student cannot be enrolled in a non-existent class.
+
+A payment cannot belong to a non-existent student.
+
+Marks cannot be entered for a non-existent examination.
+
+A teacher cannot be assigned to a deleted subject.
+
+A fee payment cannot exceed allowed outstanding amount unless configured.
+
+Use database constraints and server-side validation.
+
+====================================================
+60. DELETE BEHAVIOR
+====================================================
+
+Do not permanently delete critical historical records casually.
+
+Use soft deletion where appropriate.
+
+Examples:
+
+- Students
+- Employees
+- Fee records
+- Attendance
+- Examination records
+- Financial transactions
+
+Financial transactions should have strong protection against deletion.
+
+Use confirmation dialogs for destructive actions.
+
+====================================================
+61. BACKUP / RECOVERY ARCHITECTURE
+====================================================
+
+Design the system to support:
+
+- Database backups
+- File backups
+- Recovery
+- Data export
+- Disaster recovery
+
+Do not claim automatic backups unless actually implemented/configured.
+
+====================================================
+62. ACTUAL DATA FLOW
+====================================================
+
+The complete system must follow this flow:
+
+User action
+→ Frontend validation
+→ API/server
+→ Authentication/authorization
+→ Database operation
+→ Validation
+→ Database response
+→ UI update
+→ Success/error message
+→ Audit log where required
+
+Do not simulate this with frontend-only state.
+
+====================================================
+63. NO FAKE DATA RULE
+====================================================
+
+This rule is mandatory.
+
+Do not create:
+
+- Fake students
+- Fake teachers
+- Fake parents
+- Fake payments
+- Fake attendance
+- Fake marks
+- Fake exams
+- Fake books
+- Fake vehicles
+- Fake notices
+- Fake charts
+- Fake notifications
+- Fake analytics
+
+If the database is empty, the software must look professional while clearly showing that no records exist yet.
+
+====================================================
+64. NO AI-LIKE UI RULE
+====================================================
+
+Do not make the application look like an AI-generated project.
+
+Avoid:
+
+"Welcome back, here's your AI-powered education journey!"
+
+Avoid unnecessary AI terminology.
+
+Avoid fake AI assistants.
+
+Avoid decorative gradient cards.
+
+Use straightforward professional language.
+
+Examples:
+
+"Students"
+
+"Attendance"
+
+"Fees"
+
+"Examinations"
+
+"Reports"
+
+"Settings"
+
+"Add Student"
+
+"Create Examination"
+
+"Record Payment"
+
+"Generate Report"
+
+The software should feel like a real institutional management system.
+
+====================================================
+65. NO HARD-CODED DEMO CONTENT
+====================================================
+
+The frontend must not contain hard-coded institution records.
+
+Institution name, students, teachers, departments, subjects, fees, etc. must come from the database or configuration.
+
+Only UI labels and system configuration may be static.
+
+====================================================
+66. SEED DATA
+====================================================
+
+Do NOT create demo seed data in production.
+
+If development requires seed data internally, keep it completely separate from production and do not expose it to actual users.
+
+The production database must start clean.
+
+====================================================
+67. PROFESSIONAL ONBOARDING
+====================================================
+
+When the institution has no data:
+
+Show a clean setup dashboard.
+
+Example:
+
+"Let's set up your institution"
+
+Progress:
+
+Institution
+Academic Year
+Departments
+Programs
+Classes
+Subjects
+Users
+
+Each step should lead to the correct module.
+
+====================================================
+68. USER PROFILE
+====================================================
+
+Users should be able to manage:
+
+- Profile photo
+- Name
+- Email
+- Phone
+- Password
+- Notification preferences
+
+Administrators can manage user accounts according to permissions.
+
+====================================================
+69. SECURITY SETTINGS
+====================================================
+
+Include:
+
+- Password change
+- Session management
+- Login history
+- Active sessions
+- Two-factor authentication architecture
+- Security alerts
+- Account lockout/rate limiting
+
+Do not claim 2FA is active unless it is actually implemented.
+
+====================================================
+70. SEARCHABLE SELECTORS
+====================================================
+
+Large relationships must use searchable selectors.
+
+For example:
+
+When assigning a student to a class, do not load every student into a huge dropdown.
+
+Use searchable selection.
+
+====================================================
+71. BULK OPERATIONS
+====================================================
+
+Where appropriate support:
+
+- Bulk student import
+- Bulk attendance
+- Bulk marks
+- Bulk fee assignment
+- Bulk notices
+- Bulk status updates
+
+All bulk actions must have validation and confirmation.
+
+====================================================
+72. PRINT DESIGN
+====================================================
+
+Create professional printable documents:
+
+- Student profile
+- Admission receipt
+- Fee receipt
+- Examination timetable
+- Result sheet
+- Attendance report
+- Fee report
+- Student ID card
+- Employee ID card
+
+Printable versions must not look like screenshots of the web UI.
+
+====================================================
+73. ID CARD GENERATOR
+====================================================
+
+Create configurable ID card generation.
+
+Student ID card:
+
+- Institution logo
+- Student photo
+- Student name
+- Student ID
+- Class/program
+- Section/batch
+- Validity
+- QR/barcode if enabled
+
+Employee ID card should support similar fields.
+
+Do not create fake IDs.
+
+====================================================
+74. QR CODE ARCHITECTURE
+====================================================
+
+Where appropriate, support QR codes for:
+
+- Student ID
+- Employee ID
+- Attendance
+- Verification
+
+QR codes must point to secure authenticated/verification routes.
+
+Do not expose private student information publicly.
+
+====================================================
+75. ADMINISTRATION WORKFLOW
+====================================================
+
+Important workflows should be simple.
+
+Example:
+
+Add Student
+
+→ Student Information
+→ Guardian
+→ Academic Enrollment
+→ Documents
+→ Review
+→ Save
+
+Example:
+
+Create Examination
+
+→ Examination Details
+→ Subjects
+→ Schedule
+→ Rooms
+→ Invigilators
+→ Publish
+
+Example:
+
+Collect Fee
+
+→ Select Student
+→ View Outstanding Fees
+→ Select Payment
+→ Confirm
+→ Generate Receipt
+
+====================================================
+76. AUDITABLE FINANCIAL SYSTEM
+====================================================
+
+Financial operations must be traceable.
+
+Every payment should have:
+
+- Receipt number
+- Student
+- Amount
+- Payment method
+- Transaction reference
+- Date/time
+- Recorded by
+- Status
+
+Never allow silent modification of financial records.
+
+====================================================
+77. REPORT DASHBOARD
+====================================================
+
+Create a dedicated reports center.
+
+Use professional filters.
+
+Do not fill charts with invented information.
+
+Charts should update when actual database records change.
+
+For example:
+
+If 50 students are added, the dashboard should automatically reflect 50.
+
+If 10 payments are recorded, the financial report should automatically update.
+
+====================================================
+78. REAL-TIME UPDATES
+====================================================
+
+Where technically appropriate, support real-time updates for:
+
+- Notifications
+- Attendance
+- Fee payments
+- Announcements
+- Administrative changes
+
+Do not add real-time technology where it is unnecessary.
+
+====================================================
+79. TECHNOLOGY ARCHITECTURE
+====================================================
+
+Use a modern production-ready stack.
+
+Preferred:
+
+Frontend:
+React + TypeScript
+
+Styling:
+Tailwind CSS
+
+Backend:
+A secure server/API architecture appropriate for the selected platform.
+
+Database:
+PostgreSQL
+
+Authentication:
+Secure production authentication
+
+Storage:
+Object/cloud storage
+
+Deployment:
+Production-ready cloud deployment
+
+Use environment variables for configuration.
+
+Keep frontend, backend, database, authentication, and storage architecture cleanly separated.
+
+If the platform provides an integrated backend/database, use its proper production architecture rather than creating a fake local-only application.
+
+====================================================
+80. CODE QUALITY
+====================================================
+
+Write clean maintainable code.
+
+Requirements:
+
+- TypeScript where supported
+- Reusable components
+- Reusable forms
+- Reusable tables
+- Proper API service layer
+- Proper validation
+- Meaningful naming
+- No unnecessary duplication
+- No giant monolithic components
+- No unused dependencies
+- No dead code
+- No console errors
+- No broken routes
+
+====================================================
+81. ENVIRONMENT CONFIGURATION
+====================================================
+
+Use environment variables for:
+
+- Database URL
+- Authentication configuration
+- Storage credentials
+- Email provider
+- SMS provider
+- Payment gateway
+- Other secrets
+
+Never commit secrets into source code.
+
+Create a clear environment configuration structure.
+
+====================================================
+82. PRODUCTION READINESS
+====================================================
+
+Before considering the application complete, verify:
+
+- Authentication works
+- Authorization works
+- Database operations work
+- CRUD works
+- Forms validate
+- Search works
+- Filters work
+- Pagination works
+- Reports work
+- File uploads work
+- Mobile UI works
+- Error handling works
+- Empty states work
+- No fake data exists
+- No broken links
+- No console errors
+- No placeholder text
+- No unfinished pages
+- No "coming soon" sections unless genuinely planned
+- No fake integrations
+- No fake payment success
+- No fake analytics
+
+====================================================
+83. TESTING
+====================================================
+
+Create a testing strategy.
+
+Test:
+
+Authentication
+Authorization
+Student CRUD
+Faculty CRUD
+Admission
+Attendance
+Timetable
+Examination
+Marks
+Results
+Fees
+Payments
+Library
+Transport
+Hostel
+Reports
+File upload
+Notifications
+Role permissions
+Mobile responsiveness
+
+Test edge cases.
+
+Examples:
+
+- Duplicate student
+- Invalid email
+- Invalid marks
+- Payment larger than outstanding
+- Unauthorized access
+- Missing required fields
+- Deleted records
+- Empty database
+- Large dataset
+- Invalid file
+
+====================================================
+84. FINAL UI QUALITY CHECK
+====================================================
+
+Before finalizing, inspect every page.
+
+Remove:
+
+- Placeholder text
+- Fake data
+- Broken icons
+- Broken images
+- Empty cards with no purpose
+- Unnecessary animations
+- AI-style copy
+- Unused buttons
+- Non-functional dropdowns
+- Fake charts
+- Fake notifications
+- Demo content
+
+Every visible button should either work or be intentionally disabled with a clear reason.
+
+Every navigation item should lead to a real page.
+
+====================================================
+85. FINAL PRODUCT STRUCTURE
+====================================================
+
+Main navigation:
+
+Dashboard
+
+Admissions
+
+Students
+
+Faculty
+
+Staff
+
+Academics
+
+Departments
+
+Programs
+
+Classes / Sections
+
+Subjects
+
+Attendance
+
+Timetable
+
+Examinations
+
+Results
+
+Assignments
+
+Fees
+
+Accounting
+
+Library
+
+Transport
+
+Hostel
+
+Leave
+
+Communication
+
+Notices
+
+Calendar
+
+Reports
+
+Documents
+
+Users & Roles
+
+Audit Logs
+
+Settings
+
+The navigation should automatically hide modules that the current user does not have permission to access.
+
+====================================================
+86. FINAL REQUIREMENT
+====================================================
+
+Build this as a serious commercial-grade School & College Management System.
+
+Do not build a showcase.
+
+Do not build a fake dashboard.
+
+Do not create dummy records.
+
+Do not simulate backend behavior.
+
+Do not hard-code statistics.
+
+Do not create fake payment confirmations.
+
+Do not create fake charts.
+
+Do not make it look AI-generated.
+
+Every major feature must be connected to real application logic and a real database.
+
+The final result should be clean, professional, scalable, secure, responsive, maintainable, and suitable for deployment to an actual educational institution.
+
+Start by establishing the complete project architecture, database schema, authentication/authorization model, navigation structure, and design system.
+
+Then implement the application module by module without breaking previously implemented functionality.
+
+Do not remove working features when adding new features.
+
+Keep the codebase organized and production-ready throughout development.

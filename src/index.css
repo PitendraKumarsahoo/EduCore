@@ -1,0 +1,621 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+    /* Neutral & Surface Tokens */
+    --ec-bg: #f4f7fb;
+    --ec-sidebar-bg: #f7f9fc;
+    --ec-surface: #ffffff;
+    --ec-surface-muted: #f8fafc;
+    --ec-surface-subtle: #f1f5fa;
+    --ec-border: #e2e8f0;
+    --ec-border-strong: #cbd5e1;
+    --ec-text-primary: #0f172a;
+    --ec-text-secondary: #334155;
+    --ec-text-muted: #64748b;
+
+    /* Primary Brand Tokens */
+    --ec-primary: #1e40af;
+    --ec-primary-hover: #1e3a8a;
+    --ec-primary-soft: #eff6ff;
+    --ec-primary-border: #bfdbfe;
+    --ec-primary-text: #1e3a8a;
+
+    /* Secondary Structural Tokens */
+    --ec-secondary: #334155;
+    --ec-secondary-hover: #1e293b;
+    --ec-secondary-soft: #f1f5f9;
+    --ec-secondary-border: #cbd5e1;
+    --ec-secondary-text: #334155;
+
+    /* Semantic Status Tokens */
+    --ec-success: #047857;
+    --ec-success-soft: #ecfdf5;
+    --ec-success-border: #a7f3d0;
+    --ec-success-text: #065f46;
+
+    --ec-warning: #b45309;
+    --ec-warning-soft: #fffbeb;
+    --ec-warning-border: #fde68a;
+    --ec-warning-text: #92400e;
+
+    --ec-danger: #b91c1c;
+    --ec-danger-soft: #fef2f2;
+    --ec-danger-border: #fecaca;
+    --ec-danger-text: #991b1b;
+
+    --ec-info: #1d4ed8;
+    --ec-info-soft: #eff6ff;
+    --ec-info-border: #bfdbfe;
+    --ec-info-text: #1e40af;
+
+    --ec-neutral: #475569;
+    --ec-neutral-soft: #f1f5f9;
+    --ec-neutral-border: #cbd5e1;
+    --ec-neutral-text: #334155;
+
+    /* Module-Specific Accent Tokens (Restrained, Non-Rainbow Enterprise Palette) */
+    --acc-dashboard: #1e40af;
+    --acc-dashboard-soft: #eff6ff;
+    --acc-dashboard-border: #bfdbfe;
+    --acc-dashboard-text: #1e3a8a;
+
+    --acc-setup-wizard: #1e40af;
+    --acc-setup-wizard-soft: #eff6ff;
+    --acc-setup-wizard-border: #bfdbfe;
+    --acc-setup-wizard-text: #1e3a8a;
+
+    --acc-admissions: #0e7490;
+    --acc-admissions-soft: #ecfeff;
+    --acc-admissions-border: #a5f3fc;
+    --acc-admissions-text: #155e75;
+
+    --acc-students: #1d4ed8;
+    --acc-students-soft: #eff6ff;
+    --acc-students-border: #bfdbfe;
+    --acc-students-text: #1e3a8a;
+
+    --acc-faculty: #4338ca;
+    --acc-faculty-soft: #eef2ff;
+    --acc-faculty-border: #c7d2fe;
+    --acc-faculty-text: #312e81;
+
+    --acc-staff: #0f766e;
+    --acc-staff-soft: #f0fdfa;
+    --acc-staff-border: #99f6e4;
+    --acc-staff-text: #115e59;
+
+    --acc-leave: #be123c;
+    --acc-leave-soft: #fff1f2;
+    --acc-leave-border: #fecdd3;
+    --acc-leave-text: #881337;
+
+    --acc-academics: #3730a3;
+    --acc-academics-soft: #eef2ff;
+    --acc-academics-border: #c7d2fe;
+    --acc-academics-text: #312e81;
+
+    --acc-attendance: #047857;
+    --acc-attendance-soft: #ecfdf5;
+    --acc-attendance-border: #a7f3d0;
+    --acc-attendance-text: #065f46;
+
+    --acc-timetable: #0f766e;
+    --acc-timetable-soft: #f0fdfa;
+    --acc-timetable-border: #99f6e4;
+    --acc-timetable-text: #115e59;
+
+    --acc-examinations: #6d28d9;
+    --acc-examinations-soft: #f5f3ff;
+    --acc-examinations-border: #ddd6fe;
+    --acc-examinations-text: #4c1d95;
+
+    --acc-results: #4338ca;
+    --acc-results-soft: #eef2ff;
+    --acc-results-border: #c7d2fe;
+    --acc-results-text: #312e81;
+
+    --acc-assignments: #3730a3;
+    --acc-assignments-soft: #eef2ff;
+    --acc-assignments-border: #c7d2fe;
+    --acc-assignments-text: #312e81;
+
+    --acc-fees: #b45309;
+    --acc-fees-soft: #fffbeb;
+    --acc-fees-border: #fde68a;
+    --acc-fees-text: #92400e;
+
+    --acc-accounting: #047857;
+    --acc-accounting-soft: #ecfdf5;
+    --acc-accounting-border: #a7f3d0;
+    --acc-accounting-text: #065f46;
+
+    --acc-library: #0f766e;
+    --acc-library-soft: #f0fdfa;
+    --acc-library-border: #99f6e4;
+    --acc-library-text: #115e59;
+
+    --acc-transport: #c2410c;
+    --acc-transport-soft: #fff7ed;
+    --acc-transport-border: #fed7aa;
+    --acc-transport-text: #9a3412;
+
+    --acc-hostel: #6d28d9;
+    --acc-hostel-soft: #f5f3ff;
+    --acc-hostel-border: #ddd6fe;
+    --acc-hostel-text: #4c1d95;
+
+    --acc-communication: #1d4ed8;
+    --acc-communication-soft: #eff6ff;
+    --acc-communication-border: #bfdbfe;
+    --acc-communication-text: #1e3a8a;
+
+    --acc-notices: #1e40af;
+    --acc-notices-soft: #eff6ff;
+    --acc-notices-border: #bfdbfe;
+    --acc-notices-text: #1e3a8a;
+
+    --acc-calendar: #4f46e5;
+    --acc-calendar-soft: #eef2ff;
+    --acc-calendar-border: #c7d2fe;
+    --acc-calendar-text: #3730a3;
+
+    --acc-reports: #3730a3;
+    --acc-reports-soft: #eef2ff;
+    --acc-reports-border: #c7d2fe;
+    --acc-reports-text: #312e81;
+
+    --acc-documents: #475569;
+    --acc-documents-soft: #f8fafc;
+    --acc-documents-border: #cbd5e1;
+    --acc-documents-text: #334155;
+
+    --acc-users-roles: #334155;
+    --acc-users-roles-soft: #f1f5f9;
+    --acc-users-roles-border: #cbd5e1;
+    --acc-users-roles-text: #1e293b;
+
+    --acc-audit-logs: #475569;
+    --acc-audit-logs-soft: #f8fafc;
+    --acc-audit-logs-border: #cbd5e1;
+    --acc-audit-logs-text: #334155;
+
+    --acc-settings: #334155;
+    --acc-settings-soft: #f1f5f9;
+    --acc-settings-border: #cbd5e1;
+    --acc-settings-text: #1e293b;
+
+    /* Active PageHeader Context Defaults */
+    --page-accent: var(--ec-primary);
+    --page-accent-soft: var(--ec-primary-soft);
+    --page-accent-border: var(--ec-primary-border);
+    --page-accent-text: var(--ec-primary-text);
+  }
+
+  html {
+    font-size: 16px;
+  }
+
+  html,
+  body {
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.55;
+    background-color: var(--ec-bg);
+    color: var(--ec-text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  .font-mono,
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+@layer components {
+  .ec-page-header {
+    background: linear-gradient(115deg, var(--page-accent-soft) 0%, var(--ec-surface) 76%);
+    border-color: var(--page-accent-border);
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  }
+
+  .ec-page-header-icon {
+    background-color: var(--ec-surface);
+    border-color: var(--page-accent-border);
+    color: var(--page-accent-text);
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  }
+
+  /* Tone Fallbacks for explicit PageHeader accent overrides */
+  .ec-page-header[data-accent="blue"] {
+    --page-accent: var(--acc-students);
+    --page-accent-soft: var(--acc-students-soft);
+    --page-accent-border: var(--acc-students-border);
+    --page-accent-text: var(--acc-students-text);
+  }
+  .ec-page-header[data-accent="indigo"] {
+    --page-accent: var(--acc-academics);
+    --page-accent-soft: var(--acc-academics-soft);
+    --page-accent-border: var(--acc-academics-border);
+    --page-accent-text: var(--acc-academics-text);
+  }
+  .ec-page-header[data-accent="violet"],
+  .ec-page-header[data-accent="purple"] {
+    --page-accent: var(--acc-examinations);
+    --page-accent-soft: var(--acc-examinations-soft);
+    --page-accent-border: var(--acc-examinations-border);
+    --page-accent-text: var(--acc-examinations-text);
+  }
+  .ec-page-header[data-accent="teal"] {
+    --page-accent: var(--acc-library);
+    --page-accent-soft: var(--acc-library-soft);
+    --page-accent-border: var(--acc-library-border);
+    --page-accent-text: var(--acc-library-text);
+  }
+  .ec-page-header[data-accent="emerald"] {
+    --page-accent: var(--acc-attendance);
+    --page-accent-soft: var(--acc-attendance-soft);
+    --page-accent-border: var(--acc-attendance-border);
+    --page-accent-text: var(--acc-attendance-text);
+  }
+  .ec-page-header[data-accent="amber"] {
+    --page-accent: var(--acc-fees);
+    --page-accent-soft: var(--acc-fees-soft);
+    --page-accent-border: var(--acc-fees-border);
+    --page-accent-text: var(--acc-fees-text);
+  }
+  .ec-page-header[data-accent="cyan"] {
+    --page-accent: var(--acc-admissions);
+    --page-accent-soft: var(--acc-admissions-soft);
+    --page-accent-border: var(--acc-admissions-border);
+    --page-accent-text: var(--acc-admissions-text);
+  }
+  .ec-page-header[data-accent="rose"] {
+    --page-accent: var(--acc-leave);
+    --page-accent-soft: var(--acc-leave-soft);
+    --page-accent-border: var(--acc-leave-border);
+    --page-accent-text: var(--acc-leave-text);
+  }
+  .ec-page-header[data-accent="orange"] {
+    --page-accent: var(--acc-transport);
+    --page-accent-soft: var(--acc-transport-soft);
+    --page-accent-border: var(--acc-transport-border);
+    --page-accent-text: var(--acc-transport-text);
+  }
+  .ec-page-header[data-accent="slate"] {
+    --page-accent: var(--acc-settings);
+    --page-accent-soft: var(--acc-settings-soft);
+    --page-accent-border: var(--acc-settings-border);
+    --page-accent-text: var(--acc-settings-text);
+  }
+
+  /* Module-Specific PageHeader Bindings */
+  .ec-page-header[data-module="dashboard"] {
+    --page-accent: var(--acc-dashboard);
+    --page-accent-soft: var(--acc-dashboard-soft);
+    --page-accent-border: var(--acc-dashboard-border);
+    --page-accent-text: var(--acc-dashboard-text);
+  }
+  .ec-page-header[data-module="setup_wizard"] {
+    --page-accent: var(--acc-setup-wizard);
+    --page-accent-soft: var(--acc-setup-wizard-soft);
+    --page-accent-border: var(--acc-setup-wizard-border);
+    --page-accent-text: var(--acc-setup-wizard-text);
+  }
+  .ec-page-header[data-module="admissions"] {
+    --page-accent: var(--acc-admissions);
+    --page-accent-soft: var(--acc-admissions-soft);
+    --page-accent-border: var(--acc-admissions-border);
+    --page-accent-text: var(--acc-admissions-text);
+  }
+  .ec-page-header[data-module="students"] {
+    --page-accent: var(--acc-students);
+    --page-accent-soft: var(--acc-students-soft);
+    --page-accent-border: var(--acc-students-border);
+    --page-accent-text: var(--acc-students-text);
+  }
+  .ec-page-header[data-module="faculty"] {
+    --page-accent: var(--acc-faculty);
+    --page-accent-soft: var(--acc-faculty-soft);
+    --page-accent-border: var(--acc-faculty-border);
+    --page-accent-text: var(--acc-faculty-text);
+  }
+  .ec-page-header[data-module="staff"] {
+    --page-accent: var(--acc-staff);
+    --page-accent-soft: var(--acc-staff-soft);
+    --page-accent-border: var(--acc-staff-border);
+    --page-accent-text: var(--acc-staff-text);
+  }
+  .ec-page-header[data-module="leave"] {
+    --page-accent: var(--acc-leave);
+    --page-accent-soft: var(--acc-leave-soft);
+    --page-accent-border: var(--acc-leave-border);
+    --page-accent-text: var(--acc-leave-text);
+  }
+  .ec-page-header[data-module="academics"],
+  .ec-page-header[data-module="departments"],
+  .ec-page-header[data-module="programs"],
+  .ec-page-header[data-module="classes"],
+  .ec-page-header[data-module="subjects"] {
+    --page-accent: var(--acc-academics);
+    --page-accent-soft: var(--acc-academics-soft);
+    --page-accent-border: var(--acc-academics-border);
+    --page-accent-text: var(--acc-academics-text);
+  }
+  .ec-page-header[data-module="attendance"] {
+    --page-accent: var(--acc-attendance);
+    --page-accent-soft: var(--acc-attendance-soft);
+    --page-accent-border: var(--acc-attendance-border);
+    --page-accent-text: var(--acc-attendance-text);
+  }
+  .ec-page-header[data-module="timetable"] {
+    --page-accent: var(--acc-timetable);
+    --page-accent-soft: var(--acc-timetable-soft);
+    --page-accent-border: var(--acc-timetable-border);
+    --page-accent-text: var(--acc-timetable-text);
+  }
+  .ec-page-header[data-module="examinations"] {
+    --page-accent: var(--acc-examinations);
+    --page-accent-soft: var(--acc-examinations-soft);
+    --page-accent-border: var(--acc-examinations-border);
+    --page-accent-text: var(--acc-examinations-text);
+  }
+  .ec-page-header[data-module="results"] {
+    --page-accent: var(--acc-results);
+    --page-accent-soft: var(--acc-results-soft);
+    --page-accent-border: var(--acc-results-border);
+    --page-accent-text: var(--acc-results-text);
+  }
+  .ec-page-header[data-module="assignments"] {
+    --page-accent: var(--acc-assignments);
+    --page-accent-soft: var(--acc-assignments-soft);
+    --page-accent-border: var(--acc-assignments-border);
+    --page-accent-text: var(--acc-assignments-text);
+  }
+  .ec-page-header[data-module="fees"] {
+    --page-accent: var(--acc-fees);
+    --page-accent-soft: var(--acc-fees-soft);
+    --page-accent-border: var(--acc-fees-border);
+    --page-accent-text: var(--acc-fees-text);
+  }
+  .ec-page-header[data-module="accounting"] {
+    --page-accent: var(--acc-accounting);
+    --page-accent-soft: var(--acc-accounting-soft);
+    --page-accent-border: var(--acc-accounting-border);
+    --page-accent-text: var(--acc-accounting-text);
+  }
+  .ec-page-header[data-module="library"] {
+    --page-accent: var(--acc-library);
+    --page-accent-soft: var(--acc-library-soft);
+    --page-accent-border: var(--acc-library-border);
+    --page-accent-text: var(--acc-library-text);
+  }
+  .ec-page-header[data-module="transport"] {
+    --page-accent: var(--acc-transport);
+    --page-accent-soft: var(--acc-transport-soft);
+    --page-accent-border: var(--acc-transport-border);
+    --page-accent-text: var(--acc-transport-text);
+  }
+  .ec-page-header[data-module="hostel"] {
+    --page-accent: var(--acc-hostel);
+    --page-accent-soft: var(--acc-hostel-soft);
+    --page-accent-border: var(--acc-hostel-border);
+    --page-accent-text: var(--acc-hostel-text);
+  }
+  .ec-page-header[data-module="communication"] {
+    --page-accent: var(--acc-communication);
+    --page-accent-soft: var(--acc-communication-soft);
+    --page-accent-border: var(--acc-communication-border);
+    --page-accent-text: var(--acc-communication-text);
+  }
+  .ec-page-header[data-module="notices"] {
+    --page-accent: var(--acc-notices);
+    --page-accent-soft: var(--acc-notices-soft);
+    --page-accent-border: var(--acc-notices-border);
+    --page-accent-text: var(--acc-notices-text);
+  }
+  .ec-page-header[data-module="calendar"] {
+    --page-accent: var(--acc-calendar);
+    --page-accent-soft: var(--acc-calendar-soft);
+    --page-accent-border: var(--acc-calendar-border);
+    --page-accent-text: var(--acc-calendar-text);
+  }
+  .ec-page-header[data-module="reports"] {
+    --page-accent: var(--acc-reports);
+    --page-accent-soft: var(--acc-reports-soft);
+    --page-accent-border: var(--acc-reports-border);
+    --page-accent-text: var(--acc-reports-text);
+  }
+  .ec-page-header[data-module="documents"] {
+    --page-accent: var(--acc-documents);
+    --page-accent-soft: var(--acc-documents-soft);
+    --page-accent-border: var(--acc-documents-border);
+    --page-accent-text: var(--acc-documents-text);
+  }
+  .ec-page-header[data-module="users_roles"] {
+    --page-accent: var(--acc-users-roles);
+    --page-accent-soft: var(--acc-users-roles-soft);
+    --page-accent-border: var(--acc-users-roles-border);
+    --page-accent-text: var(--acc-users-roles-text);
+  }
+  .ec-page-header[data-module="audit_logs"] {
+    --page-accent: var(--acc-audit-logs);
+    --page-accent-soft: var(--acc-audit-logs-soft);
+    --page-accent-border: var(--acc-audit-logs-border);
+    --page-accent-text: var(--acc-audit-logs-text);
+  }
+  .ec-page-header[data-module="settings"] {
+    --page-accent: var(--acc-settings);
+    --page-accent-soft: var(--acc-settings-soft);
+    --page-accent-border: var(--acc-settings-border);
+    --page-accent-text: var(--acc-settings-text);
+  }
+
+  .ec-card {
+    @apply bg-white border border-slate-200/90 rounded-[12px] shadow-[0_1px_3px_rgba(15,23,42,0.04)];
+  }
+
+  .ec-card-interactive {
+    @apply bg-white border border-slate-200/90 rounded-[12px] shadow-[0_1px_3px_rgba(15,23,42,0.04)] transition-all duration-150 hover:shadow-[0_6px_18px_-6px_rgba(15,23,42,0.1)] hover:border-slate-300/90;
+  }
+
+  .ec-label {
+    @apply block text-[14px] font-medium text-slate-700 mb-1.5;
+  }
+
+  .ec-helper {
+    @apply text-[13px] text-slate-500 mt-1;
+  }
+
+  .ec-input {
+    @apply w-full px-3.5 py-2.5 text-[15px] leading-snug text-slate-900 bg-white border border-slate-300 rounded-[10px] placeholder:text-slate-400 transition-colors duration-150 focus:outline-none focus:border-blue-700 focus:ring-2 focus:ring-blue-700/15 disabled:bg-slate-100 disabled:text-slate-500;
+  }
+
+  .ec-select {
+    @apply w-full px-3.5 py-2.5 text-[15px] leading-snug text-slate-900 bg-white border border-slate-300 rounded-[10px] transition-colors duration-150 focus:outline-none focus:border-blue-700 focus:ring-2 focus:ring-blue-700/15 disabled:bg-slate-100 disabled:text-slate-500;
+  }
+
+  .ec-textarea {
+    @apply w-full px-3.5 py-2.5 text-[15px] leading-relaxed text-slate-900 bg-white border border-slate-300 rounded-[10px] placeholder:text-slate-400 transition-colors duration-150 focus:outline-none focus:border-blue-700 focus:ring-2 focus:ring-blue-700/15 disabled:bg-slate-100 disabled:text-slate-500;
+  }
+
+  .ec-btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 text-[14px] font-medium text-white rounded-[10px] shadow-[0_1px_2px_rgba(30,64,175,0.2)] focus:outline-none focus:ring-2 focus:ring-blue-700/30 transition-colors duration-150 disabled:opacity-55 disabled:cursor-not-allowed whitespace-nowrap shrink-0;
+    background-color: var(--ec-primary);
+  }
+  .ec-btn-primary:hover:not(:disabled) {
+    background-color: var(--ec-primary-hover);
+  }
+
+  .ec-btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 text-[14px] font-medium text-slate-700 bg-white border border-slate-300 rounded-[10px] hover:bg-slate-50 hover:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300/50 transition-colors duration-150 disabled:opacity-55 disabled:cursor-not-allowed whitespace-nowrap shrink-0;
+  }
+
+  .ec-btn-danger {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 text-[14px] font-medium text-white rounded-[10px] focus:outline-none focus:ring-2 focus:ring-red-600/30 transition-colors duration-150 disabled:opacity-55 disabled:cursor-not-allowed whitespace-nowrap shrink-0;
+    background-color: var(--ec-danger);
+  }
+  .ec-btn-danger:hover:not(:disabled) {
+    background-color: #991b1b;
+  }
+
+  .ec-btn-success {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 text-[14px] font-medium text-white rounded-[10px] focus:outline-none focus:ring-2 focus:ring-emerald-600/30 transition-colors duration-150 disabled:opacity-55 disabled:cursor-not-allowed whitespace-nowrap shrink-0;
+    background-color: var(--ec-success);
+  }
+  .ec-btn-success:hover:not(:disabled) {
+    background-color: #065f46;
+  }
+
+  .ec-table {
+    @apply w-full text-left border-collapse;
+  }
+
+  .ec-thead {
+    @apply border-b border-slate-200;
+    background-color: var(--ec-surface-subtle);
+  }
+
+  .ec-th {
+    @apply px-5 py-4 text-[13px] font-semibold tracking-[0.01em] text-slate-700 whitespace-nowrap;
+  }
+
+  .ec-tbody {
+    @apply divide-y divide-slate-200/70 bg-white text-[14.5px] text-slate-700;
+  }
+
+  .ec-tr {
+    @apply even:bg-slate-50/40 hover:bg-blue-50/45 transition-colors;
+  }
+
+  .ec-td {
+    @apply px-5 py-4 text-[14.5px] text-slate-700;
+  }
+
+  .ec-skeleton {
+    background: linear-gradient(90deg, #e2e8f0 0%, #f1f5f9 50%, #e2e8f0 100%);
+    background-size: 200% 100%;
+    animation: ecSkeletonShimmer 1.6s ease-in-out infinite;
+  }
+
+  .ec-page-transition {
+    animation: ecPageFadeIn 180ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+
+@keyframes ecSkeletonShimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes ecPageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  @page {
+    margin: 12mm;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-surface {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
